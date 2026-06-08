@@ -15,9 +15,9 @@ export default function Navbar() {
         <div className="font-serif font-bold text-2xl tracking-tight text-wealth-gradient cursor-pointer">
           WLTH.
         </div>
-        <div className="flex items-center space-x-6">
-          <a href="#foundation" className="text-sm font-medium hover:text-primary transition-colors">Foundation</a>
-          <a href="#gradient" className="text-sm font-medium hover:text-primary transition-colors">The Gradient</a>
+        <div className="flex items-center space-x-4 sm:space-x-6">
+          <a href="#foundation" className="hidden sm:inline text-sm font-medium hover:text-primary transition-colors">Foundation</a>
+          <a href="#gradient" className="hidden sm:inline text-sm font-medium hover:text-primary transition-colors">The Gradient</a>
           {mounted && (
             <Button
               variant="ghost"

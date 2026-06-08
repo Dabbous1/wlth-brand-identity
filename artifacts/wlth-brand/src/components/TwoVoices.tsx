@@ -24,10 +24,10 @@ export default function TwoVoices() {
           >
             <Card className="h-full overflow-hidden border-border bg-background">
               <div className="h-2 bg-wealth-gradient" />
-              <CardContent className="p-10">
+              <CardContent className="p-6 md:p-10">
                 <div className="mb-8">
                   <span className="inline-block px-3 py-1 rounded-full bg-secondary text-sm font-medium text-muted-foreground mb-4">Consumer</span>
-                  <h3 className="text-4xl font-bold text-wealth-gradient mb-2" style={{ fontFamily: 'Philosopher, serif' }}>Philosopher</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-wealth-gradient mb-2" style={{ fontFamily: 'Philosopher, serif' }}>Philosopher</h3>
                   <p className="text-lg text-foreground/80">Warm, approachable, and humanist.</p>
                 </div>
                 
@@ -60,10 +60,10 @@ export default function TwoVoices() {
           >
             <Card className="h-full overflow-hidden border-border bg-[#15110A] text-[#F4ECDA]">
               <div className="h-2 bg-wealth-gradient" />
-              <CardContent className="p-10">
+              <CardContent className="p-6 md:p-10">
                 <div className="mb-8">
                   <span className="inline-block px-3 py-1 rounded-full bg-white/10 text-sm font-medium text-white/60 mb-4">Institutional</span>
-                  <h3 className="text-4xl font-bold text-wealth-gradient mb-2" style={{ fontFamily: 'Cardo, serif' }}>Cardo</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-wealth-gradient mb-2" style={{ fontFamily: 'Cardo, serif' }}>Cardo</h3>
                   <p className="text-lg text-white/80">Scholarly, high-contrast, and rigorous.</p>
                 </div>
                 

@@ -27,8 +27,8 @@ export default function Typography() {
               <h3 className="font-serif text-2xl font-bold mb-2">Philosopher</h3>
               <p className="text-sm text-muted-foreground mb-4">Weights: 400, 700<br/>Role: Consumer display, headlines</p>
             </div>
-            <div className="lg:col-span-8 p-12 bg-background border border-border rounded-2xl shadow-sm">
-              <div className="text-[64px] leading-tight font-serif">
+            <div className="lg:col-span-8 p-6 md:p-12 bg-background border border-border rounded-2xl shadow-sm overflow-hidden">
+              <div className="text-4xl sm:text-5xl md:text-[64px] leading-tight font-serif">
                 Wealth, <span className="text-wealth-gradient font-bold">working for you.</span>
               </div>
             </div>
@@ -45,11 +45,11 @@ export default function Typography() {
               <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Cardo, serif' }}>Cardo</h3>
               <p className="text-sm text-muted-foreground mb-4">Weights: 400, 700<br/>Role: Institutional display</p>
             </div>
-            <div className="lg:col-span-8 p-12 bg-[#15110A] text-[#F4ECDA] rounded-2xl shadow-sm">
-              <div className="text-[56px] leading-tight mb-8" style={{ fontFamily: 'Cardo, serif' }}>
+            <div className="lg:col-span-8 p-6 md:p-12 bg-[#15110A] text-[#F4ECDA] rounded-2xl shadow-sm overflow-hidden">
+              <div className="text-3xl sm:text-4xl md:text-[56px] leading-tight mb-6 md:mb-8" style={{ fontFamily: 'Cardo, serif' }}>
                 Sophisticated, guided investing.
               </div>
-              <div className="font-mono text-primary text-xl border-t border-white/10 pt-6">
+              <div className="font-mono text-primary text-base md:text-xl border-t border-white/10 pt-4 md:pt-6">
                 EGP 84.2M &middot; 312 mandates &middot; +12.7% YTD
               </div>
             </div>

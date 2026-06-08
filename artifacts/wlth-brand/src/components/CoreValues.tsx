@@ -56,7 +56,7 @@ export default function CoreValues() {
               <div className="w-px bg-border flex-shrink-0 my-4" />
 
               {/* Value content */}
-              <div className="flex flex-col justify-center px-8 md:px-12 py-8 md:py-10 flex-1">
+              <div className="flex flex-col justify-center px-4 md:px-8 lg:px-12 py-8 md:py-10 flex-1">
                 <h3 className="font-serif text-xl md:text-2xl font-bold mb-1 group-hover:text-primary transition-colors duration-300">
                   {v.title}
                 </h3>

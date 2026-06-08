@@ -38,8 +38,8 @@ export default function Home() {
           <div className="inline-block p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 mb-8">
             <h2 className="font-serif font-bold text-6xl tracking-tight text-wealth-gradient">WLTH.</h2>
           </div>
-          <p className="text-2xl font-serif mb-8 text-white/90">Wealth, working for you.</p>
-          <div className="flex items-center justify-center gap-3 text-sm font-mono text-white/50">
+          <p className="text-xl md:text-2xl font-serif mb-8 text-white/90">Wealth, working for you.</p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm font-mono text-white/50">
             <span>Acumen Holding</span>
             <span>&middot;</span>
             <span>Brand Guidelines v1.0</span>

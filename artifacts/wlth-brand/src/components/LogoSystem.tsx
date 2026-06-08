@@ -17,21 +17,21 @@ export default function LogoSystem() {
 
         {/* Primary Lockups */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="p-16 bg-[#FAF7F0] rounded-2xl flex items-center justify-center border border-border">
-            <span className="font-serif font-bold text-6xl tracking-tight text-wealth-gradient">WLTH.</span>
-            <span className="absolute top-4 left-4 text-xs font-medium text-black/40">Consumer Light</span>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative p-8 md:p-16 bg-[#FAF7F0] rounded-2xl flex items-center justify-center border border-border">
+            <span className="font-serif font-bold text-5xl md:text-6xl tracking-tight text-wealth-gradient">WLTH.</span>
+            <span className="absolute top-3 left-4 text-xs font-semibold tracking-wide uppercase text-[#23201A]">Consumer Light</span>
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="p-16 bg-[#15110A] rounded-2xl flex items-center justify-center relative">
-            <span className="font-serif font-bold text-6xl tracking-tight text-wealth-gradient">WLTH.</span>
-            <span className="absolute top-4 left-4 text-xs font-medium text-white/40">Consumer Dark</span>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative p-8 md:p-16 bg-[#15110A] rounded-2xl flex items-center justify-center">
+            <span className="font-serif font-bold text-5xl md:text-6xl tracking-tight text-wealth-gradient">WLTH.</span>
+            <span className="absolute top-3 left-4 text-xs font-semibold tracking-wide uppercase text-[#FAF7F0]">Consumer Dark</span>
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="p-16 bg-[#FAF7F0] rounded-2xl flex items-center justify-center border border-border relative">
-            <span className="text-6xl tracking-tight text-wealth-gradient" style={{ fontFamily: 'Cardo, serif' }}>WLTH.</span>
-            <span className="absolute top-4 left-4 text-xs font-medium text-black/40">Institutional Light</span>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative p-8 md:p-16 bg-[#FAF7F0] rounded-2xl flex items-center justify-center border border-border">
+            <span className="text-5xl md:text-6xl tracking-tight text-wealth-gradient" style={{ fontFamily: 'Cardo, serif' }}>WLTH.</span>
+            <span className="absolute top-3 left-4 text-xs font-semibold tracking-wide uppercase text-[#23201A]">Institutional Light</span>
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="p-16 bg-[#15110A] rounded-2xl flex items-center justify-center relative">
-            <span className="text-6xl tracking-tight text-wealth-gradient" style={{ fontFamily: 'Cardo, serif' }}>WLTH.</span>
-            <span className="absolute top-4 left-4 text-xs font-medium text-white/40">Institutional Dark</span>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative p-8 md:p-16 bg-[#15110A] rounded-2xl flex items-center justify-center">
+            <span className="text-5xl md:text-6xl tracking-tight text-wealth-gradient" style={{ fontFamily: 'Cardo, serif' }}>WLTH.</span>
+            <span className="absolute top-3 left-4 text-xs font-semibold tracking-wide uppercase text-[#FAF7F0]">Institutional Dark</span>
           </motion.div>
         </div>
 

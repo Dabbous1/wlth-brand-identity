@@ -13,7 +13,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h1 className="font-serif font-bold text-[80px] md:text-[120px] leading-none tracking-tight text-wealth-gradient mb-6">
+          <h1 className="font-serif font-bold text-[56px] sm:text-[80px] md:text-[120px] leading-none tracking-tight text-wealth-gradient mb-6">
             WLTH.
           </h1>
         </motion.div>
