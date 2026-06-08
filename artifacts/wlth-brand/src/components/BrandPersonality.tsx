@@ -2,55 +2,79 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const spectrums = [
-  { left: "Warm", right: "Cold", value: 70, invert: true },
-  { left: "Clear", right: "Complex", value: 65, invert: true },
-  { left: "Confident", right: "Arrogant", value: 40, invert: true },
-  { left: "Guiding", right: "Pushy", value: 35, invert: true },
-  { left: "Sophisticated", right: "Elitist", value: 40, invert: true },
-  { left: "Modern", right: "Trendy", value: 40, invert: true }
+  { left: "Warm", right: "Cold", value: 70 },
+  { left: "Clear", right: "Complex", value: 65 },
+  { left: "Confident", right: "Arrogant", value: 40 },
+  { left: "Guiding", right: "Pushy", value: 35 },
+  { left: "Sophisticated", right: "Elitist", value: 40 },
+  { left: "Modern", right: "Trendy", value: 40 },
 ];
+
+const ease = [0.16, 1, 0.3, 1];
 
 export default function BrandPersonality() {
   return (
-    <section id="personality" className="py-32 px-6 border-t border-border">
+    <section id="personality" className="relative py-40 px-6">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          transition={{ duration: 0.8, ease }}
+          className="mb-20"
         >
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Brand Personality</h2>
-          <p className="text-xl font-serif italic text-muted-foreground">
+          <span className="section-label mb-4 block">03 · Character</span>
+          <h2 className="font-serif text-5xl md:text-6xl font-bold leading-[1.05] mb-6">
+            Brand <span className="text-wealth-gradient">Personality</span>
+          </h2>
+          <p className="text-xl font-serif italic text-muted-foreground max-w-xl">
             "If WLTH. were a person: a trusted, sharp-minded guide — warm, never patronising."
           </p>
+          <div className="w-16 h-px bg-primary/40 mt-8" />
         </motion.div>
 
-        <div className="space-y-12">
-          {spectrums.map((s, i) => (
-            <div key={i} className="relative">
-              <div className="flex justify-between mb-3 font-medium text-sm">
-                <span className={s.invert ? 'text-primary font-bold' : 'text-muted-foreground'}>{s.left}</span>
-                <span className={!s.invert ? 'text-primary font-bold' : 'text-muted-foreground'}>{s.right}</span>
-              </div>
-              <div className="h-2 w-full bg-secondary rounded-full overflow-hidden relative">
-                <motion.div
-                  className="absolute top-0 left-0 h-full bg-wealth-gradient rounded-full"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${100 - s.value}%` }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-                />
-              </div>
+        <div className="space-y-10">
+          {spectrums.map((s, i) => {
+            const fillWidth = 100 - s.value;
+            return (
               <motion.div
-                className="absolute top-8 w-4 h-4 bg-background border-2 border-primary rounded-full shadow-sm -mt-[22px]"
-                initial={{ left: 0 }}
-                whileInView={{ left: `calc(${100 - s.value}% - 8px)` }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-              />
-            </div>
-          ))}
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ delay: i * 0.06, duration: 0.5, ease }}
+                className="group"
+              >
+                <div className="flex justify-between mb-3">
+                  <span className="text-sm font-semibold text-primary">{s.left}</span>
+                  <span className="text-sm text-muted-foreground/60">{s.right}</span>
+                </div>
+
+                <div className="relative h-1.5 w-full bg-secondary rounded-full overflow-visible">
+                  {/* Gold fill */}
+                  <motion.div
+                    className="absolute top-0 left-0 h-full rounded-full"
+                    style={{ background: 'linear-gradient(90deg, #7E5A12, #BD8E25, #D7A736, #E3B340, #F6D87A)' }}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${fillWidth}%` }}
+                    viewport={{ once: true, margin: "-30px" }}
+                    transition={{ duration: 1.2, delay: i * 0.08, ease: "easeOut" }}
+                  />
+
+                  {/* Dot indicator */}
+                  <motion.div
+                    className="absolute top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full border-2 border-primary bg-background shadow-md transition-transform duration-300 group-hover:scale-125"
+                    initial={{ left: 0 }}
+                    whileInView={{ left: `calc(${fillWidth}% - 7px)` }}
+                    viewport={{ once: true, margin: "-30px" }}
+                    transition={{ duration: 1.2, delay: i * 0.08, ease: "easeOut" }}
+                  />
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

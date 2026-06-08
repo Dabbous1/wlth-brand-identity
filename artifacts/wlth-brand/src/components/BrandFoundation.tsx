@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
 
 const pillars = [
   {
@@ -13,7 +12,7 @@ const pillars = [
   },
   {
     title: "Positioning",
-    description: "For everyday Egyptians — from first-time savers to the mass-affluent — who are stuck between shallow trading apps and out-of-reach private banks, WLTH. is the wealth management platform that makes sophisticated, guided investing genuinely accessible to all, instead of forcing you to choose between simple-but-shallow or powerful-but-exclusive platforms."
+    description: "For everyday Egyptians — from first-time savers to the mass-affluent — who are stuck between shallow trading apps and out-of-reach private banks, WLTH. is the wealth management platform that makes sophisticated, guided investing genuinely accessible to all."
   },
   {
     title: "Only-ness",
@@ -21,35 +20,56 @@ const pillars = [
   }
 ];
 
+const ease = [0.16, 1, 0.3, 1];
+
 export default function BrandFoundation() {
   return (
-    <section id="foundation" className="py-32 px-6 bg-secondary/30 border-t border-border">
-      <div className="max-w-7xl mx-auto">
+    <section id="foundation" className="relative py-40 px-6 overflow-hidden">
+      {/* Background texture */}
+      <div className="absolute inset-0 bg-secondary/30" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        {/* Section header — editorial style */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-16 text-center"
+          transition={{ duration: 0.8, ease }}
+          className="mb-24"
         >
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Brand Foundation</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">The promise that guides every decision, every interface, and every interaction.</p>
+          <span className="section-label mb-4 block">00 · Foundation</span>
+          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 max-w-3xl">
+            The promise that guides <span className="text-wealth-gradient">every decision.</span>
+          </h2>
+          <div className="w-16 h-px bg-primary/40 mt-8" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {pillars.map((pillar, index) => (
+        {/* Pillars — asymmetric editorial grid */}
+        <div className="space-y-0">
+          {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: i * 0.08, ease }}
+              className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 border-b border-border/60 last:border-b-0"
             >
-              <Card className="h-full bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-colors duration-300">
-                <CardContent className="p-8">
-                  <h3 className="font-serif text-2xl font-bold mb-4 text-primary">{pillar.title}</h3>
-                  <p className="text-lg leading-relaxed text-foreground/80">{pillar.description}</p>
-                </CardContent>
-              </Card>
+              {/* Title column */}
+              <div className="md:col-span-3 flex items-baseline gap-4">
+                <span className="font-mono text-xs text-primary/50 tabular-nums">0{i + 1}</span>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold group-hover:text-primary transition-colors duration-500">
+                  {pillar.title}
+                </h3>
+              </div>
+
+              {/* Description column */}
+              <div className="md:col-span-9 md:pl-8 md:border-l md:border-border/40">
+                <p className="text-lg md:text-xl leading-relaxed text-foreground/75 max-w-2xl">
+                  {pillar.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
