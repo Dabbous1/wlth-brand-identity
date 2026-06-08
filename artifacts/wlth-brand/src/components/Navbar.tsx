@@ -21,7 +21,7 @@ export default function Navbar() {
         ? 'bg-background/90 backdrop-blur-xl border-b border-border shadow-sm'
         : 'bg-transparent border-b border-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="w-full px-6 h-14 flex items-center justify-between">
         <a href="#" className="font-serif font-bold text-lg tracking-tight text-wealth-gradient hover:opacity-80 transition-opacity">
           WLTH.
         </a>
