@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 const spectrums = [
   { left: "Warm", right: "Cold", value: 70 },
   { left: "Clear", right: "Complex", value: 65 },
-  { left: "Confident", right: "Arrogant", value: 40 },
-  { left: "Guiding", right: "Pushy", value: 35 },
-  { left: "Sophisticated", right: "Elitist", value: 40 },
-  { left: "Modern", right: "Trendy", value: 40 },
+  { left: "Confident", right: "Arrogant", value: 72 },
+  { left: "Guiding", right: "Pushy", value: 74 },
+  { left: "Sophisticated", right: "Elitist", value: 68 },
+  { left: "Modern", right: "Trendy", value: 66 },
 ];
 
 const ease = [0.16, 1, 0.3, 1];
